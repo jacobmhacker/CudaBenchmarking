@@ -5,6 +5,8 @@ __global__ void max_val(int* d_max, int* arr, int n) {
 	int base = threadIdx.x * n;
 	int max = *(arr + base);
 
+	printf("In thread %d\n", threadIdx.x);
+
 	for(int i = base + 1; i < base + n; i++) {
 		if(*(arr + i) > max) {
 			max = *(arr + i);

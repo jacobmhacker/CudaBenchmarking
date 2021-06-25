@@ -16,6 +16,8 @@ int max_val(int* arr, int n) {
 /*
  * stdin takes the following inputs:
  *  - Array size
+ *  - POSIX threads (ignored)
+ *  - GPU threads (ignored)
  *  - Array
  */
 
@@ -24,6 +26,7 @@ int main() {
 	int* arr;
 
 	scanf("%d", &n);
+	scanf("%*d %*d");
 	arr = (int*) malloc(sizeof(int) * n);
 
 	for(int i = 0; i < n; i++) {
